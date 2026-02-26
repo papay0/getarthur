@@ -17,8 +17,8 @@ export function CopyButton({ text }: { text: string }) {
       onClick={handleCopy}
       className={`inline-flex items-center gap-1.5 text-[12px] font-medium transition-colors ${
         copied
-          ? "text-emerald-700"
-          : "text-[#9b9586] hover:text-[#2c2418]"
+          ? "text-emerald-600 dark:text-emerald-400"
+          : "text-muted-foreground hover:text-foreground"
       }`}
     >
       {copied ? (

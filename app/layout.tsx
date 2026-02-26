@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,13 +20,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Arthur — Talk to Your Mac from Anywhere",
+  title: "Arthur — Personal AI Assistant",
   description:
-    "A personal AI assistant that runs entirely on Claude. Open the Claude app on your phone and talk to your Mac — notes, reminders, messages, the web.",
+    "A personal AI assistant built entirely on Claude Code. Install with one prompt. Talk from the Claude app or claude.ai.",
   openGraph: {
-    title: "Arthur — Talk to Your Mac from Anywhere",
+    title: "Arthur — Personal AI Assistant",
     description:
-      "A personal AI assistant that runs entirely on Claude. Open the Claude app and talk to your Mac.",
+      "A personal AI assistant built entirely on Claude Code. Install with one prompt.",
     type: "website",
   },
 };
@@ -36,11 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

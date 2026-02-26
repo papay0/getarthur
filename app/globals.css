@@ -87,6 +87,40 @@ html {
   --sidebar-ring: #d4a574;
 }
 
+.dark {
+  --background: #0f0d0a;
+  --foreground: #e8e4dc;
+  --card: #1a1714;
+  --card-foreground: #e8e4dc;
+  --popover: #0f0d0a;
+  --popover-foreground: #e8e4dc;
+  --primary: #d4a574;
+  --primary-foreground: #0f0d0a;
+  --secondary: #1a1714;
+  --secondary-foreground: #e8e4dc;
+  --muted: #1a1714;
+  --muted-foreground: #7a756c;
+  --accent: #1a1714;
+  --accent-foreground: #e8e4dc;
+  --destructive: #e54d2e;
+  --border: #2a2622;
+  --input: #2a2622;
+  --ring: #d4a574;
+  --chart-1: #d4a574;
+  --chart-2: #7a756c;
+  --chart-3: #9b9586;
+  --chart-4: #e54d2e;
+  --chart-5: #e8e4dc;
+  --sidebar: #1a1714;
+  --sidebar-foreground: #e8e4dc;
+  --sidebar-primary: #d4a574;
+  --sidebar-primary-foreground: #0f0d0a;
+  --sidebar-accent: #1a1714;
+  --sidebar-accent-foreground: #e8e4dc;
+  --sidebar-border: #2a2622;
+  --sidebar-ring: #d4a574;
+}
+
 ::selection {
   background: #d4a574;
   color: #fdfcf9;

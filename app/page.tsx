@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Does it cost money?",
-    a: "Arthur itself is free and open source. It runs on Claude Code, which requires a Claude account. A free account works, though a Pro subscription gives you more usage.",
+    a: "Arthur itself is free and open source. It runs on Claude Code, which requires a Claude Pro, Max, Teams, or Enterprise account — the free Claude.ai plan does not include Claude Code access.",
   },
   {
     q: "Is my data private?",
@@ -219,7 +219,7 @@ export default function Home() {
               Install Claude Code
             </p>
             <code className="mt-3 block w-fit rounded-md bg-muted px-4 py-2.5 font-mono text-[13px] text-muted-foreground">
-              npm i -g @anthropic-ai/claude-code
+              curl -fsSL https://claude.ai/install.sh | bash
             </code>
           </div>
 

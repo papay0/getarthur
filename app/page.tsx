@@ -208,7 +208,7 @@ export default function Home() {
           Get started
         </h2>
         <p className="mt-3 text-[15px] text-muted-foreground">
-          Three steps, two minutes.
+          Two steps, two minutes.
         </p>
 
         <div className="mt-10 space-y-8">
@@ -216,17 +216,6 @@ export default function Home() {
           <div>
             <p className="text-[15px] font-medium text-foreground">
               <span className="mr-2 text-[#d4a574]">1.</span>
-              Install Claude Code
-            </p>
-            <code className="mt-3 block w-fit rounded-md bg-muted px-4 py-2.5 font-mono text-[13px] text-muted-foreground">
-              curl -fsSL https://claude.ai/install.sh | bash
-            </code>
-          </div>
-
-          {/* Step 2 */}
-          <div>
-            <p className="text-[15px] font-medium text-foreground">
-              <span className="mr-2 text-[#d4a574]">2.</span>
               Run this in your terminal
             </p>
             <div className="mt-3">
@@ -234,10 +223,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Step 3 */}
+          {/* Step 2 */}
           <div>
             <p className="text-[15px] font-medium text-foreground">
-              <span className="mr-2 text-[#d4a574]">3.</span>
+              <span className="mr-2 text-[#d4a574]">2.</span>
               On first launch, inside Claude
             </p>
             <div className="mt-3 space-y-2.5">

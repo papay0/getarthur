@@ -53,9 +53,12 @@ export default function Home() {
           Personal AI Assistant
         </p>
         <p className="mt-8 max-w-[480px] text-[clamp(1.25rem,3vw,1.75rem)] leading-snug tracking-tight text-foreground">
-          A personal assistant built entirely
+          Your Mac AI that knows your calendar,
           <br />
-          on{" "}
+          messages, and life.
+        </p>
+        <p className="mt-6 max-w-[420px] text-[15px] leading-[1.7] text-muted-foreground">
+          Built on{" "}
           <a
             href="https://docs.anthropic.com/en/docs/claude-code"
             target="_blank"
@@ -64,10 +67,7 @@ export default function Home() {
           >
             Claude Code
           </a>
-          .
-        </p>
-        <p className="mt-6 max-w-[420px] text-[15px] leading-[1.7] text-muted-foreground">
-          Install with one prompt. Talk to it from the{" "}
+          . Install with one command. Talk to it from the{" "}
           <a
             href="https://apps.apple.com/app/claude-by-anthropic/id6473753684"
             target="_blank"
@@ -85,7 +85,16 @@ export default function Home() {
           >
             claude.ai
           </a>
-          . No API keys, no external tools, no config.
+          . No API keys, no extra config. Requires a{" "}
+          <a
+            href="https://claude.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline decoration-[#d4a574]/40 underline-offset-[3px] transition-colors hover:decoration-[#d4a574]"
+          >
+            Claude account
+          </a>
+          .
         </p>
         <a
           href="#setup"
@@ -135,11 +144,20 @@ export default function Home() {
               /onboarding
             </code>{" "}
             anytime to change Arthur&rsquo;s personality or reconnect tools.
-            Add new capabilities in{" "}
+          </p>
+          <p>
+            Add new capabilities by dropping a{" "}
             <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[13px] text-muted-foreground">
-              .claude/skills/
+              SKILL.md
+            </code>{" "}
+            in{" "}
+            <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[13px] text-muted-foreground">
+              .claude/skills/your-skill/
             </code>
-            . It&rsquo;s open source&mdash;fork it, extend it, make it yours.
+            . Arthur picks it up instantly &mdash; no restart needed.
+          </p>
+          <p>
+            It&rsquo;s open source. Fork it, extend it, make it yours.
           </p>
         </div>
       </section>

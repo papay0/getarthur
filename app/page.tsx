@@ -130,11 +130,12 @@ export default function Home() {
         </h2>
         <div className="mt-6 max-w-[480px] space-y-4 text-[15px] leading-[1.7] text-muted-foreground">
           <p>
-            Change Arthur&rsquo;s personality by editing{" "}
+            Run{" "}
             <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[13px] text-muted-foreground">
-              SOUL.md
-            </code>
-            . Add new capabilities in{" "}
+              /onboarding
+            </code>{" "}
+            anytime to change Arthur&rsquo;s personality or reconnect tools.
+            Add new capabilities in{" "}
             <code className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[13px] text-muted-foreground">
               .claude/skills/
             </code>
@@ -152,7 +153,7 @@ export default function Home() {
           Get started
         </h2>
         <p className="mt-3 text-[15px] text-muted-foreground">
-          Two steps, two minutes.
+          Three steps, two minutes.
         </p>
 
         <div className="mt-10 space-y-8">
@@ -175,6 +176,39 @@ export default function Home() {
             </p>
             <div className="mt-3">
               <SetupPrompt />
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div>
+            <p className="text-[15px] font-medium text-foreground">
+              <span className="mr-2 text-[#d4a574]">3.</span>
+              On first launch, inside Claude
+            </p>
+            <div className="mt-3 space-y-2.5">
+              {[
+                {
+                  cmd: "y",
+                  label: "trust the ~/arthur folder when prompted",
+                },
+                {
+                  cmd: "/onboarding",
+                  label: "pick Arthur\u2019s personality and connect your tools",
+                },
+                {
+                  cmd: "/remote-control",
+                  label: "get a link to control Arthur from the Claude app",
+                },
+              ].map(({ cmd, label }) => (
+                <div key={cmd} className="flex items-baseline gap-3">
+                  <code className="shrink-0 rounded-md bg-muted px-3 py-1.5 font-mono text-[13px] text-muted-foreground">
+                    {cmd}
+                  </code>
+                  <span className="text-[14px] text-muted-foreground">
+                    {label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

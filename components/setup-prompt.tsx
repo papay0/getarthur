@@ -6,7 +6,8 @@ import { CopyButton } from "@/components/copy-button";
 const installCommand =
   "git clone https://github.com/papay0/arthur ~/arthur && ~/arthur/start.sh";
 
-const updateCommand = "cd ~/arthur && git pull && ./start.sh";
+const updateCommand =
+  "cd ~/arthur && git pull && tmux kill-session -t arthur 2>/dev/null; ./start.sh";
 
 type Mode = "install" | "update";
 

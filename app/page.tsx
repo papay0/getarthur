@@ -1,5 +1,42 @@
 import { SetupPrompt } from "@/components/setup-prompt";
 import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Do I need technical knowledge to set it up?",
+    a: "No. One command installs everything — Arthur handles the rest. You'll be up and running in about two minutes.",
+  },
+  {
+    q: "Does it cost money?",
+    a: "Arthur itself is free and open source. It runs on Claude Code, which requires a Claude account. A free account works, though a Pro subscription gives you more usage.",
+  },
+  {
+    q: "Is my data private?",
+    a: "Arthur runs entirely on your Mac — your notes, messages, and calendar data never leave your machine except to be processed by Claude's AI (the same as using Claude normally). Nothing is stored externally.",
+  },
+  {
+    q: "Does it work on Windows or Linux?",
+    a: "macOS only, for now. Arthur is built around Apple Notes, iMessage, and Reminders — apps that don't exist on other platforms.",
+  },
+  {
+    q: "Can I use it from my phone?",
+    a: "Yes. Run /remote-control after setup to get a link that lets you control Arthur from the Claude app on your iPhone.",
+  },
+  {
+    q: "Do I have to connect Gmail, iMessage, and everything else?",
+    a: "No — everything is optional. Arthur works fine with just the tools you choose to connect. You can add or remove integrations anytime with /onboarding.",
+  },
+  {
+    q: "How do I stop or restart Arthur?",
+    a: "Stop it with: tmux kill-session -t arthur. Restart with: ~/arthur/start.sh. To update to the latest version: ~/arthur/update.sh.",
+  },
+];
 
 const capabilities = [
   ["Apple Notes", "search, read, create, and edit your notes"],
@@ -254,6 +291,28 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ── Divider ── */}
+      <div className="h-px w-10 bg-[#d4a574]/30" />
+
+      {/* ── FAQ ── */}
+      <section className="py-20 sm:py-24">
+        <h2 className="font-serif text-[28px] italic tracking-tight">
+          Common questions
+        </h2>
+        <Accordion type="single" collapsible className="mt-10">
+          {faqs.map(({ q, a }) => (
+            <AccordionItem key={q} value={q}>
+              <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline">
+                {q}
+              </AccordionTrigger>
+              <AccordionContent className="text-[14px] leading-[1.7] text-muted-foreground">
+                {a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </section>
 
       {/* ── Footer ── */}

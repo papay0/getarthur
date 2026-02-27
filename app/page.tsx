@@ -21,8 +21,8 @@ const faqs = [
     a: "Arthur runs entirely on your Mac — your notes, messages, and calendar data never leave your machine except to be processed by Claude's AI (the same as using Claude normally). Nothing is stored externally.",
   },
   {
-    q: "Does it work on Windows or Linux?",
-    a: "macOS only, for now. Arthur is built around Apple Notes, iMessage, and Reminders — apps that don't exist on other platforms.",
+    q: "Does it work on Linux?",
+    a: "Yes. Core features — scheduling, memory, Google Calendar, Gmail, web browsing — run on any system with a terminal and Claude Code. Apple-specific features (Notes, iMessage, Reminders) require macOS. Windows is not supported.",
   },
   {
     q: "Can I use it from my phone?",
@@ -90,7 +90,7 @@ export default function Home() {
           Personal AI Assistant
         </p>
         <p className="mt-8 max-w-[480px] text-[clamp(1.25rem,3vw,1.75rem)] leading-snug tracking-tight text-foreground">
-          Your Mac AI that knows your calendar,
+          Your AI that knows your calendar,
           <br />
           messages, and life.
         </p>
